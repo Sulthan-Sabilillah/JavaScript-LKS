@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Belajar.css";
 
 class Belajar extends Component {
   constructor(props) {
@@ -26,12 +27,22 @@ class Belajar extends Component {
   };
 
   render() {
+    const style = {
+      backgroundColor: "skyblue",
+      font: "inherit",
+      border: "2px solid pink",
+      padding: "10px",
+      cursor: "pointer",
+    };
+
     return (
       <div>
-        <button onClick={this.klikhandler}>klik</button>
-        <h1> Fruit Name Is {this.state.fruits[0].name}</h1>
-        <h1> Fruit Name Is {this.state.fruits[1].name}</h1>
-        <h1> Fruit Name Is {this.state.fruits[2].name}</h1>
+        <button style={style} onClick={this.klikhandler}>
+          klik
+        </button>
+        <h1 className="Card"> Fruit Name Is {this.state.fruits[0].name}</h1>
+        <h1 className="Card"> Fruit Name Is {this.state.fruits[1].name}</h1>
+        <h1 className="Card"> Fruit Name Is {this.state.fruits[2].name}</h1>
       </div>
     );
   }
